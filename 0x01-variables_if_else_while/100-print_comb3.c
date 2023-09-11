@@ -1,31 +1,24 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - Prints all possible combinations of two different digits,
- *        in ascending order, separated by a comma followed by a space.
+ * main - A program that prints all numbers 00-99
  *
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int digit1, digit2;
+	int num;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (num = 0; num <= 99; num++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		putchar((num / 10) + '0');
+		putchar((num % 10) + '0');
+		if (num != 99)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-			
-			putchar(',');
-			putchar(' ');
+		putchar(',');
+		putchar(' ');
 		}
-	}
-
+		}
 	putchar('\n');
-
 	return (0);
 }
