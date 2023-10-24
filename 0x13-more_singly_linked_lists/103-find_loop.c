@@ -15,7 +15,7 @@ listint_t *cheetah, *monkey;
 if (head == NULL || head->next == NULL)
 return (NULL);
 
-cheetah= head->next;
+cheetah = head->next;
 monkey = (head->next)->next;
 
 while (monkey)
