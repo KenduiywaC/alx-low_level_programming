@@ -20,10 +20,10 @@ return (-1);
 while (low <= high && value >= array[low] && value <= array[high])
 {
 mid = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
-printf("Value checked array[%ld] = [%d]\n", mid, array[mid]);
+printf("Value checked array[%lu] = [%d]\n", mid, array[mid]);
 if (array[mid] == value)
 return (mid);
-else if (array[mid] < value)
+if (array[mid] < value)
 low = mid + 1;
 else
 high = mid - 1;
